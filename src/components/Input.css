@@ -1,0 +1,37 @@
+.input-div{
+    background-color: rgb(142, 211, 110);
+    display: flex;
+    flex-direction: column;
+    margin-top:30px;
+    width:100%;
+}
+
+.ingredients-form{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: bisque;
+}
+
+.IngredientsDisplay{
+    font-size: 1rem;
+}
+
+.recipe-form{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #6B7280;
+    border-radius: 10px;
+}
+
+form input{
+    flex-basis: 45%;
+}
+
+form button{
+    flex-basis: 25%;
+}
