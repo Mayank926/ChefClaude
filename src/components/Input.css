@@ -1,18 +1,16 @@
 .input-div{
-    background-color: rgb(142, 211, 110);
     display: flex;
     flex-direction: column;
-    margin-top:30px;
+    margin-top:75px;
     width:100%;
+    padding: 5px 35px 0px 35px;
 }
 
 .ingredients-form{
     width:100%;
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 20px;
-    background-color: bisque;
 }
 
 .IngredientsDisplay{
@@ -28,10 +26,28 @@
     border-radius: 10px;
 }
 
-form input{
-    flex-basis: 45%;
+.ingredients-form input{
+    flex-basis: 70%;
+    font-size: 1.2rem;
+    padding : 12px;
+    border-radius: 8px;
+    border: 1px solid #D1D5DB;
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0, 0.30) 
 }
 
-form button{
-    flex-basis: 25%;
+.ingredients-form button{
+    flex-basis: 30%;
+    font-family: Inter;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: none;
+    padding : 12px;
+    background-color: #141413;
+    color: #FAFAF8;
+
+}
+
+.ingredients-form button::before{
+    content: "+";
+    margin-right: 5px;
 }
