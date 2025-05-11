@@ -1,48 +1,42 @@
-import './Input.css';
+import React from "react";
+import "./Input.css";
 
-let ingredientListItems = [];
-const handleClick = () => {
-  console.log('Button clicked!'); 
-}
+const Input = ({ ingredientsList, setIngredientListItems }) => {
+  const addIngredient = (formData) => {
+    const newIngredient = formData.get("ingredient"); // Get the value of the input field
+    setIngredientListItems((prevList) => [...prevList, newIngredient]);
+  };
 
-const handleMouseOver = () => {
-  console.log('Mouse over!');
-}
-
-const formSubmitted = (event) => {
-  event.preventDefault(); // Prevent the default form submission behavior
-  const formData = new FormData(event.currentTarget);
-  const newIngredient = formData.get('ingredient'); // Get the value of the input field
-  ingredientListItems.push(<li>{newIngredient}</li>); // Add the new ingredient to the list
-  console.log('Form submitted!');
-  console.log(ingredientListItems)
-}
-
-const Input = () => {
   return (
     <div className="input-div">
-      <form className="ingredients-form" onSubmit={formSubmitted}>
+      <form className="ingredients-form" action={addIngredient}>
         <input
           type="text"
           placeholder="e.g. oregano"
           aria-label="Provide igredients"
           name="ingredient"
         ></input>
-        <button onClick={handleClick} onMouseOver={handleMouseOver}>Add ingredient</button>
+        <button>Add ingredient</button>
       </form>
-      <div className="IngredientsDisplay">
-        <h1>Ingredient on hand</h1>
-        <ul className="ingredients-list">
-          {ingredientListItems}
-        </ul>
-      </div>
-      <form className="recipe-form">
-        <div className="reipe-form-text-div">
-          <h3>Ready for recepie?</h3>
-          <p>Generate a recepie from your list of ingredients.</p>
+      {ingredientsList.length > 0 ? (
+        <div className="IngredientsDisplay">
+          <h1>Ingredients on hand:</h1>
+          <ul className="ingredients-list">
+            {ingredientsList.map((ingredient, index) => (
+              <li key={index}>{ingredient}</li>
+            ))}
+          </ul>
         </div>
-        <button>Get a receipe</button>
-      </form>
+      ) : null}
+      {ingredientsList.length > 3 ? (
+        <form className="recipe-form">
+          <div className="reipe-form-text-div">
+            <h3>Ready for recepie?</h3>
+            <p>Generate a recepie from your list of ingredients.</p>
+          </div>
+          <button>Get a receipe</button>
+        </form>
+      ) : null}
     </div>
   );
 };

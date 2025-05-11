@@ -1,7 +1,6 @@
 .input-div{
     display: flex;
     flex-direction: column;
-    margin-top:75px;
     width:100%;
     padding: 5px 35px 0px 35px;
 }
@@ -14,7 +13,14 @@
 }
 
 .IngredientsDisplay{
-    font-size: 1rem;
+    margin-top: 50px;
+    font-size: 1.2rem;
+    color: rgb(56, 50, 50);
+}
+
+.IngredientsDisplay ul{
+    margin-top: 35px;
+    font-size: 1.5rem;
 }
 
 .recipe-form{
