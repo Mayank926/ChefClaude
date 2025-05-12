@@ -7,12 +7,16 @@
     align-items: center;
     justify-content: center;
     gap: 15px;
-    padding : 35px 0px 35px 0px;
+    flex-basis: 10%;
 }
 
-.header img{
-    align-self: flex-start;
-    width: 60px;
+.imagecontentbox{
+    height:50%;
+}
+
+.imagecontentbox img{
+    height: 100%;
+    width: auto;
 }
 
 .header span{

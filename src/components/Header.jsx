@@ -2,7 +2,7 @@ import './Header.css';
 const Header = () => {
     return (
         <header className="header">
-           <img src = "ChefClaude/images/chef-claude-icon.png"></img>
+           <div className='imagecontentbox'><img src = "ChefClaude/images/chef-claude-icon.png"></img></div>
            <span>Chef Claude</span>
         </header>
     );

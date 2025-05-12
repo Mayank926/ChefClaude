@@ -26,10 +26,42 @@
 .recipe-form{
     display:flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    background-color: #6B7280;
+    background-color: #3b4352;
     border-radius: 10px;
+    margin-top : 20px;
+    padding:10px;
+    background: #F0EFEB;
+    font-size: 1.2rem;
+}
+
+.reipe-form-text-div h3{
+    margin : 15px;
+    font-weight: 500;
+    color: #101216;
+}
+
+.reipe-form-text-div p{
+    margin : 15px;
+    font-weight: 400;
+    color: #4c5668;
+}
+
+
+
+.reipe-form-text-div{
+    margin: 20px 20px 20px 20px;
+}
+
+.recipe-form button{
+    margin : 20px 20px 20px 100px;
+    padding:14px 20px 14px 20px;
+    font-size: 1.2rem;
+    background-color: rgb(220, 114, 76);
+    border-radius: 8px;
+    color: rgb(242, 240, 240);
+    border-width: 0;
 }
 
 .ingredients-form input{
@@ -37,7 +69,7 @@
     font-size: 1.2rem;
     padding : 12px;
     border-radius: 8px;
-    border: 1px solid #D1D5DB;
+    border: 1px solid #d9e1ec;
     box-shadow: 0px 1px 2px 0px rgba(0,0,0, 0.30) 
 }
 

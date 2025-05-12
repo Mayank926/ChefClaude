@@ -31,7 +31,7 @@ const Input = ({ ingredientsList, setIngredientListItems }) => {
       {ingredientsList.length > 3 ? (
         <form className="recipe-form">
           <div className="reipe-form-text-div">
-            <h3>Ready for recepie?</h3>
+            <h3>Ready for a recepie?</h3>
             <p>Generate a recepie from your list of ingredients.</p>
           </div>
           <button>Get a receipe</button>
